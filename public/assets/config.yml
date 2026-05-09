@@ -154,17 +154,13 @@ services:
         type: "Vaultwarden"
         logo: "assets/tools/sample.png"
         url: https://pass.weeping.cn
-
-  - name: "监控中心"
-    icon: "fas fa-satellite-dish"
-    items:
       - name: "Uptime Kuma"
         icon: "fas fa-chart-line"
         type: "Ping"
         method: "GET"
         subtitle: "全天候服务在线率统计"
         tag: "监控面板"
-        tagstyle: "is-danger"
+        tagstyle: "_blank"
         # 这里填入你的 Uptime Kuma 状态页地址
         url: "https://uptimee.zeabur.app/" 
         target: "_blank"
