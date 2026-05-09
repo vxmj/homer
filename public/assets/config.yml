@@ -134,3 +134,15 @@ services:
         subtitle: "域名与闲置流转"
         url: "https://goofish.com/"
         target: "_blank"
+
+  - name: "监控中心"
+    icon: "fas fa-satellite-dish"
+    items:
+      - name: "Uptime Kuma"
+        icon: "fas fa-chart-line"
+        subtitle: "全天候服务在线率统计"
+        tag: "监控面板"
+        tagstyle: "is-danger"
+        # 这里填入你的 Uptime Kuma 状态页地址
+        url: "https://uptimee.zeabur.app/" 
+        target: "_blank"
