@@ -2,7 +2,7 @@
 # 页面基础配置
 title: "极客实验室"
 subtitle: "个人基础设施与服务导航"
-logo: "assets/logo.png"
+logo: "logo.png"
 
 # 顶部导航头部开关
 header: true
