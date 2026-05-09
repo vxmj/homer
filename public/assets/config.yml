@@ -1,0 +1,145 @@
+---
+# 页面基础配置
+title: "极客实验室"
+subtitle: "个人基础设施与服务导航"
+logo: "assets/logo.png"
+
+# 顶部导航头部开关
+header: true
+
+# 页面列数排版 (1, 2, 3, 4, 6, 12)
+columns: "3" 
+
+# 默认布局和主题
+defaults:
+  layout: columns 
+  colorTheme: auto # 跟随系统自动切换亮色/暗色
+
+# 主题颜色自定义 (保留了默认的舒适配色)
+colors:
+  light:
+    highlight-primary: "#3367d6"
+    highlight-secondary: "#4285f4"
+    highlight-hover: "#5a95f5"
+    background: "#f5f5f5"
+    card-background: "#ffffff"
+    text: "#363636"
+    text-header: "#424242"
+    text-title: "#303030"
+    text-subtitle: "#424242"
+    card-shadow: rgba(0, 0, 0, 0.1)
+    link: "#3273dc"
+    link-hover: "#363636"
+  dark:
+    highlight-primary: "#3367d6"
+    highlight-secondary: "#4285f4"
+    highlight-hover: "#5a95f5"
+    background: "#131313"
+    card-background: "#2b2b2b"
+    text: "#eaeaea"
+    text-header: "#ffffff"
+    text-title: "#fafafa"
+    text-subtitle: "#f5f5f5"
+    card-shadow: rgba(0, 0, 0, 0.4)
+    link: "#3273dc"
+    link-hover: "#ffdd57"
+
+# 顶栏公告消息 (可用于备忘录或重要提醒)
+message:
+  style: "is-info"
+  title: "👋 欢迎回来！"
+  icon: "fas fa-terminal"
+  content: "所有服务平稳运行中。别忘了定期备份重要容器数据。"
+
+# 核心服务分类
+services:
+  - name: "基础设施与面板"
+    icon: "fas fa-server"
+    items:
+      - name: "1Panel 管理面板"
+        icon: "fas fa-layer-group"
+        subtitle: "核心服务器运维中心"
+        tag: "VPS"
+        tagstyle: "is-danger"
+        url: "https://你的1panel地址:端口" 
+        target: "_blank"
+      - name: "Flassh 终端"
+        icon: "fas fa-terminal"
+        subtitle: "Web SSH 客户端"
+        tag: "工具"
+        tagstyle: "is-info"
+        url: "https://你的flassh域名"
+        target: "_blank"
+      - name: "Google Cloud Platform"
+        icon: "fab fa-google"
+        subtitle: "云端计算资源"
+        tag: "云服务"
+        url: "https://console.cloud.google.com/"
+        target: "_blank"
+
+  - name: "PaaS 与部署平台"
+    icon: "fas fa-cloud-upload-alt"
+    items:
+      - name: "Zeabur"
+        icon: "fas fa-bolt"
+        subtitle: "快速容器部署"
+        tag: "PaaS"
+        tagstyle: "is-warning"
+        url: "https://dash.zeabur.com/"
+        target: "_blank"
+      - name: "Railway"
+        icon: "fas fa-train"
+        subtitle: "后端服务托管"
+        tag: "PaaS"
+        tagstyle: "is-warning"
+        url: "https://railway.app/dashboard"
+        target: "_blank"
+      - name: "阿里云控制台"
+        icon: "fas fa-cloud"
+        subtitle: "边缘加速与 Pages"
+        url: "https://homenew.console.aliyun.com/"
+        target: "_blank"
+
+  - name: "网络、代理与域名"
+    icon: "fas fa-network-wired"
+    items:
+      - name: "Xray 节点管理"
+        icon: "fas fa-shield-alt"
+        subtitle: "VLESS/Reality 协议配置"
+        tag: "网络安全"
+        tagstyle: "is-success"
+        url: "https://你的代理面板地址"
+        target: "_blank"
+      - name: "Spaceship"
+        icon: "fas fa-rocket"
+        subtitle: "域名资产管理 (.xyz/.cn)"
+        tag: "域名"
+        url: "https://www.spaceship.com/"
+        target: "_blank"
+      - name: "路由器后台"
+        icon: "fas fa-wifi"
+        subtitle: "网关与局域网管理"
+        url: "http://192.168.1.1" # 请修改为你的实际内网 IP
+        target: "_blank"
+
+  - name: "自建服务与物联网"
+    icon: "fas fa-cube"
+    items:
+      - name: "密码管理器"
+        icon: "fas fa-key"
+        subtitle: "自建密码库 (稳定运行中)"
+        tag: "核心数据"
+        tagstyle: "is-danger"
+        url: "https://你的密码管理器地址"
+        target: "_blank"
+      - name: "米家全屋智能"
+        icon: "fas fa-home"
+        subtitle: "设备自动化控制端"
+        tag: "IoT"
+        tagstyle: "is-success"
+        url: "#" # 如果有相关的Web端或Home Assistant可以填这里
+      - name: "闲鱼工作台"
+        icon: "fas fa-store"
+        subtitle: "域名与闲置流转"
+        url: "https://goofish.com/"
+        target: "_blank"
