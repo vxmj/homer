@@ -7,7 +7,9 @@ logo: "logo.png"
 # 顶部导航头部开关
 header: true
 
+# 低栏备案号
 footer: '<div style="display: flex; justify-content: center; align-items: center; gap: 20px;"><a href="https://beian.mps.gov.cn/#/query/webSearch?code=45098102000495" target="_blank" style="display: flex; align-items: center; gap: 5px; color: inherit; text-decoration: none;"><img src="https://beian.mps.gov.cn/img/logo01.dd7ff50e.png" style="width: 18px; height: 18px;">桂公网安备45098102000495号</a><a href="https://beian.miit.gov.cn" target="_blank" style="color: inherit; text-decoration: none;">桂ICP备2022002693号-3</a></div>'
+
 # 页面列数排版 (1, 2, 3, 4, 6, 12)
 columns: "3" 
 
@@ -37,7 +39,7 @@ colors:
     highlight-hover: "#5a95f5"
     background: "#131313"
     card-background: "#2b2b2b"
-    text: "#ffffff"
+    text: "#eaeaea"
     text-header: "#ffffff"
     text-title: "#fafafa"
     text-subtitle: "#f5f5f5"
@@ -69,13 +71,7 @@ services:
         subtitle: "Web SSH 客户端"
         tag: "工具"
         tagstyle: "is-info"
-        url: "https://你的flassh域名"
-        target: "_blank"
-      - name: "Google Cloud Platform"
-        icon: "fab fa-google"
-        subtitle: "云端计算资源"
-        tag: "云服务"
-        url: "https://console.cloud.google.com/"
+        url: "https://webssh.cfapps.ap11.hana.ondemand.com/"
         target: "_blank"
 
   - name: "PaaS 与部署平台"
