@@ -97,6 +97,12 @@ services:
         subtitle: "边缘加速与 Pages"
         url: "https://homenew.console.aliyun.com/"
         target: "_blank"
+      - name: "DNSPod"
+        icon: "fas fa-nextdns"
+        subtitle: "边缘加速与 Pages"
+        url: "https://console.dnspod.cn/dns/list"
+        target: "_blank"
+        
 
   - name: "网络与域名"
     icon: "fas fa-network-wired"
