@@ -68,6 +68,7 @@ services:
         target: "_blank"
       - name: "Flassh 终端"
         icon: "fas fa-terminal"
+        type: "Ping"
         subtitle: "Web SSH 客户端"
         tag: "工具"
         tagstyle: "is-info"
