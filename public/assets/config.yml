@@ -112,22 +112,13 @@ services:
         subtitle: "DNS解析"
         url: "https://console.dnspod.cn/dns/list"
         target: "_blank"
-        
-
-  - name: "网络与域名"
-    icon: "fas fa-network-wired"
-    items:
       - name: "Spaceship"
         icon: "fas fa-rocket"
         subtitle: "域名资产管理"
         tag: "域名"
         url: "https://www.spaceship.com/"
         target: "_blank"
-      - name: "路由器后台"
-        icon: "fas fa-wifi"
-        subtitle: "网关与局域网管理"
-        url: "http://192.168.31.1" # 请修改为你的实际内网 IP
-        target: "_blank"
+        
 
   - name: "自建服务与物联网"
     icon: "fas fa-cube"
@@ -150,10 +141,10 @@ services:
         subtitle: "域名与闲置流转"
         url: "https://goofish.com/"
         target: "_blank"
-      - name: "Vaultwarden - Server"
+      - name: "Vaultwarden"
         type: "Vaultwarden"
         logo: "assets/tools/sample.png"
-        url: https://pass.weeping.cn
+        url: "https://pass.weeping.cn"
       - name: "Uptime Kuma"
         icon: "fas fa-chart-line"
         type: "Ping"
@@ -163,4 +154,9 @@ services:
         tagstyle: "_blank"
         # 这里填入你的 Uptime Kuma 状态页地址
         url: "https://uptimee.zeabur.app/" 
+        target: "_blank"
+      - name: "路由器后台"
+        icon: "fas fa-wifi"
+        subtitle: "网关与局域网管理"
+        url: "http://192.168.31.1" # 请修改为你的实际内网 IP
         target: "_blank"
