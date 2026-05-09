@@ -150,6 +150,10 @@ services:
         subtitle: "域名与闲置流转"
         url: "https://goofish.com/"
         target: "_blank"
+      - name: "Vaultwarden - Server"
+        type: "Vaultwarden"
+        logo: "assets/tools/sample.png"
+        url: https://pass.weeping.cn
 
   - name: "监控中心"
     icon: "fas fa-satellite-dish"
