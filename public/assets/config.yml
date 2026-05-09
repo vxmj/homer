@@ -74,6 +74,14 @@ services:
         tagstyle: "is-info"
         url: "https://webssh.cfapps.ap11.hana.ondemand.com/"
         target: "_blank"
+      - name: "Cloud Mail"
+        icon: "fas fa-envelope"
+        type: "Ping"
+        subtitle: "邮箱收发服务"
+        tag: "工具"
+        tagstyle: "is-info"
+        url: "https://mail.777735.xyz/"
+        target: "_blank"
 
   - name: "PaaS 与部署平台"
     icon: "fas fa-cloud-upload-alt"
@@ -146,6 +154,7 @@ services:
     items:
       - name: "Uptime Kuma"
         icon: "fas fa-chart-line"
+        type: "Ping"
         subtitle: "全天候服务在线率统计"
         tag: "监控面板"
         tagstyle: "is-danger"
