@@ -98,8 +98,8 @@ services:
         url: "https://homenew.console.aliyun.com/"
         target: "_blank"
       - name: "DNSPod"
-        icon: "fas fa-nextdns"
-        subtitle: "边缘加速与 Pages"
+        icon: "fas fa-cloudflare"
+        subtitle: "DNS解析"
         url: "https://console.dnspod.cn/dns/list"
         target: "_blank"
         
