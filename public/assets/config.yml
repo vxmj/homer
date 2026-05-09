@@ -100,16 +100,9 @@ services:
         url: "https://homenew.console.aliyun.com/"
         target: "_blank"
 
-  - name: "网络、代理与域名"
+  - name: "网络与域名"
     icon: "fas fa-network-wired"
     items:
-      - name: "Xray 节点管理"
-        icon: "fas fa-shield-alt"
-        subtitle: "VLESS/Reality 协议配置"
-        tag: "网络安全"
-        tagstyle: "is-success"
-        url: "https://你的代理面板地址"
-        target: "_blank"
       - name: "Spaceship"
         icon: "fas fa-rocket"
         subtitle: "域名资产管理 (.xyz/.cn)"
