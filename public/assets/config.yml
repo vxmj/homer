@@ -175,7 +175,7 @@ services:
         method: "GET"
         url: "https://mail.777735.xyz/"
         target: "_blank"
-        keywords: "邮件 mail 邮箱"
+        keywords: "test"
 
       - name: "IT Toolbox"
         icon: "fas fa-toolbox"
