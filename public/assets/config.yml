@@ -26,8 +26,7 @@ header: false   # true=显示顶部导航栏，false=隐藏
 
 # ── 底部备案信息 ──────────────────────────────────────────
 # 设为 false 可完全隐藏底栏
-footer: '<div style="display: flex; justify-content: center; align-items: center; gap: 20px;"><a href="https://beian.mps.gov.cn/#/query/webSearch?code=45098102000495" target="_blank" style="display: flex; align-items: center; gap: 5px; color: inherit; text-decoration: none;"><img src="https://beian.mps.gov.cn/img/logo01.dd7ff50e.png" style="width: 18px; height: 18px;">桂公网安备45098102000495号</a><a href="https://beian.miit.gov.cn" target="_blank" style="color: inherit; text-decoration: none;">桂ICP备2022002693号-3</a></div>'
-
+footer: '<div style="display:flex;justify-content:center;align-items:center;gap:20px;font-weight:600;font-size:13px;"><a href="https://beian.mps.gov.cn/#/query/webSearch?code=45098102000495" target="_blank" style="display:flex;align-items:center;gap:5px;color:#555;text-decoration:none;transition:color .2s;" onmouseover="this.style.color=''#222''" onmouseout="this.style.color=''#555''"><img src="https://beian.mps.gov.cn/img/logo01.dd7ff50e.png" style="width:16px;height:16px;opacity:.85;">桂公网安备45098102000495号</a><a href="https://beian.miit.gov.cn" target="_blank" style="color:#555;text-decoration:none;transition:color .2s;" onmouseover="this.style.color=''#222''" onmouseout="this.style.color=''#555''">桂ICP备2022002693号-3</a></div>'
 # ── 布局列数 ──────────────────────────────────────────────
 # 可选值："auto" 或 数字（必须是 12 的因数：1, 2, 3, 4, 6, 12）
 columns: "auto"
@@ -104,7 +103,7 @@ message:
   #   content: "value"    # 用接口返回的 'value' 字段作为内容
   # refreshInterval: 60000  # 自动刷新间隔（毫秒），60000 = 每分钟刷新一次
 
-  style: "is-info"             # 消息样式颜色：is-info(蓝) / is-success(绿) / is-warning(黄) / is-danger(红)
+  style: "is-light"             # 消息样式颜色：is-info(蓝) / is-success(绿) / is-warning(黄) / is-danger(红)
   title: "👋 欢迎回来！"        # 公告标题
   icon: "fas fa-terminal"      # 公告图标
   # content 支持 HTML，可以插入图片、链接、div 等任意内容
