@@ -1,38 +1,84 @@
 ---
-# 页面基础配置
-title: "极客实验室"
-subtitle: "个人基础设施与服务导航"
-logo: "logo.png"
+# ============================================================
+# Homer 导航页完整配置文件（含全部可用选项，中文注释）
+# 图标搜索：https://fontawesome.com/search
+# ============================================================
 
-# 顶部导航头部开关
-header: true
+# 【可选】从外部 URL 加载配置文件（启用后本文件其余配置将被忽略）
+# externalConfig: https://example.com/server-luci/config.yaml
 
-# 低栏备案号
+# ── 基础信息 ──────────────────────────────────────────────
+title: "极客实验室"                  # 页面主标题
+subtitle: "个人基础设施与服务导航"     # 页面副标题
+logo: "logo.png"                      # 顶部 Logo 图片路径（放在 assets/ 目录下）
+# 【二选一】也可以用 Font Awesome 图标代替 Logo 图片，取消下行注释即可
+# icon: "fas fa-terminal"
+
+# 【可选】自定义浏览器标签页标题（不设置则默认使用 title 字段）
+# documentTitle: "极客实验室 - 导航"
+
+# ── 顶部导航栏 ────────────────────────────────────────────
+header: true   # true=显示顶部导航栏，false=隐藏
+
+# 【可选】自定义搜索框的快捷键，默认是 "/" 键
+# hotkey:
+#   search: "Shift"   # 改成 Shift 键触发搜索
+
+# ── 底部备案信息 ──────────────────────────────────────────
+# 设为 false 可完全隐藏底栏
 footer: '<div style="display: flex; justify-content: center; align-items: center; gap: 20px;"><a href="https://beian.mps.gov.cn/#/query/webSearch?code=45098102000495" target="_blank" style="display: flex; align-items: center; gap: 5px; color: inherit; text-decoration: none;"><img src="https://beian.mps.gov.cn/img/logo01.dd7ff50e.png" style="width: 18px; height: 18px;">桂公网安备45098102000495号</a><a href="https://beian.miit.gov.cn" target="_blank" style="color: inherit; text-decoration: none;">桂ICP备2022002693号-3</a></div>'
 
-# 页面列数排版 (1, 2, 3, 4, 6, 12)
-columns: "3" 
+# ── 布局列数 ──────────────────────────────────────────────
+# 可选值："auto" 或 数字（必须是 12 的因数：1, 2, 3, 4, 6, 12）
+columns: "3"
 
-# 默认布局和主题
+# ── 网络连通性检测 ────────────────────────────────────────
+# true=开启：当 Homer 页面不可访问时（如 VPN 断开）会显示提示信息
+# 使用认证代理时建议开启，可在认证过期后自动刷新页面
+connectivityCheck: true
+
+# ── 代理与请求头设置 ──────────────────────────────────────
+# 用于智能卡片从外部服务抓取数据时的全局请求配置
+# proxy:
+#   useCredentials: false   # true=请求时携带 Cookie 和认证头（使用认证代理时需开启）
+#   headers:                # 全局自定义请求头，也可在单个服务项上单独设置
+#     Authorization: "Bearer 你的Token"
+#     X-Custom-Header: "自定义值"
+
+# ── 默认布局与主题 ────────────────────────────────────────
 defaults:
-  layout: columns 
-  colorTheme: auto # 跟随系统自动切换亮色/暗色
+  layout: columns    # 布局方式：columns（卡片列）或 list（列表）
+  colorTheme: auto   # 配色方案：auto（跟随系统）/ light（强制亮色）/ dark（强制暗色）
 
-# 主题颜色自定义 (保留了默认的舒适配色)
+# ── 主题风格 ──────────────────────────────────────────────
+# 使用内置主题，可选 'default' 或 src/assets/themes 目录下的其他主题名
+theme: default
+
+# ── 自定义 CSS 样式文件 ───────────────────────────────────
+# 可加载自定义 CSS，常用于引入额外图标集或覆盖样式
+# stylesheet:
+#   - "assets/custom.css"
+#   - "assets/icons.css"
+
+# ── 颜色主题自定义 ────────────────────────────────────────
+# 只改需要的颜色即可，未填写的项会使用默认值
 colors:
   light:
-    highlight-primary: "#3367d6"
-    highlight-secondary: "#4285f4"
-    highlight-hover: "#5a95f5"
-    background: "#f5f5f5"
-    card-background: "#ffffff"
-    text: "#363636"
-    text-header: "#424242"
-    text-title: "#303030"
-    text-subtitle: "#424242"
-    card-shadow: rgba(0, 0, 0, 0.1)
-    link: "#3273dc"
-    link-hover: "#363636"
+    highlight-primary: "#3367d6"       # 主强调色（顶栏背景等）
+    highlight-secondary: "#4285f4"     # 次强调色
+    highlight-hover: "#5a95f5"         # 悬停高亮色
+    background: "#f5f5f5"             # 页面背景色
+    card-background: "#ffffff"         # 卡片背景色
+    text: "#363636"                    # 正文文字颜色
+    text-header: "#424242"            # 顶栏文字颜色
+    text-title: "#303030"             # 卡片标题文字颜色
+    text-subtitle: "#424242"          # 卡片副标题文字颜色
+    card-shadow: rgba(0, 0, 0, 0.1)  # 卡片阴影
+    link: "#3273dc"                    # 链接颜色
+    link-hover: "#363636"             # 链接悬停颜色
+    # 【可选】亮色模式背景图（路径以 assets/ 为根，子路径部署需加前缀）
+    # background-image: "assets/bg-light.png"
+
   dark:
     highlight-primary: "#3367d6"
     highlight-secondary: "#4285f4"
@@ -46,45 +92,93 @@ colors:
     card-shadow: rgba(0, 0, 0, 0.4)
     link: "#3273dc"
     link-hover: "#ffdd57"
+    # 【可选】暗色模式背景图
+    # background-image: "assets/bg-dark.png"
 
-# 顶栏公告消息 (可用于备忘录或重要提醒)
+# ── 顶栏公告消息 ──────────────────────────────────────────
 message:
-  style: "is-info"
-  title: "👋 欢迎回来！"
-  icon: "fas fa-terminal"
+  # 【可选】从远程接口动态获取公告内容（会覆盖下面的静态配置）
+  # url: "https://api.example.com/message"
+  # mapping:              # 字段映射：将接口返回的字段名映射到 Homer 期望的字段
+  #   title: "id"         # 用接口返回的 'id' 字段作为标题
+  #   content: "value"    # 用接口返回的 'value' 字段作为内容
+  # refreshInterval: 60000  # 自动刷新间隔（毫秒），60000 = 每分钟刷新一次
+
+  style: "is-info"             # 消息样式颜色：is-info(蓝) / is-success(绿) / is-warning(黄) / is-danger(红)
+  title: "👋 欢迎回来！"        # 公告标题
+  icon: "fas fa-terminal"      # 公告图标
+  # content 支持 HTML，可以插入图片、链接、div 等任意内容
   content: "所有服务平稳运行中。别忘了定期备份重要容器数据。"
 
-# 核心服务分类
+# ── 顶部导航链接 ──────────────────────────────────────────
+# 显示在顶栏右侧的快捷链接（暗色切换、布局切换、搜索框始终显示）
+# 设为空列表 links: [] 可以保留搜索/切换功能但不显示任何链接
+links:
+  - name: "GitHub"
+    icon: "fab fa-github"
+    url: "https://github.com/"
+    target: "_blank"           # _blank=新标签页打开，_self=当前页打开
+  - name: "Homer 文档"
+    icon: "fas fa-book"
+    url: "https://github.com/bastienwirtz/homer/blob/main/docs/configuration.md"
+    target: "_blank"
+  # 【多页面功能】链接到第二个配置页面，Homer 会加载 assets/page2.yml
+  # - name: "第二页"
+  #   icon: "fas fa-file-alt"
+  #   url: "#page2"
+
+# ============================================================
+# 服务分组（第一层为分组，第二层 items 为具体服务卡片）
+# ============================================================
+
+# ── tagstyle 颜色速查 ──────────────────────────────────────
+# is-info    → 蓝色
+# is-success → 绿色
+# is-warning → 黄色
+# is-danger  → 红色
+# 更多样式见：https://bulma.io/documentation/start/syntax/
+
 services:
+  # ── 分组一：基础设施与面板 ────────────────────────────
   - name: "基础设施与面板"
-    icon: "fas fa-server"
+    icon: "fas fa-server"          # 分组图标（与 logo 二选一）
+    # logo: "assets/group-infra.png"  # 分组也可用图片 Logo
+    # class: "highlight-purple"       # 可选：给整个分组卡片加自定义 CSS 类
     items:
       - name: "1Panel 管理面板"
         icon: "fas fa-layer-group"
         subtitle: "核心服务器运维中心"
         tag: "VPS"
         tagstyle: "is-danger"
-        url: "https://你的1panel地址:端口" 
+        url: "https://你的1panel地址:端口"
         target: "_blank"
+        keywords: "服务器 面板 运维 vps"  # 搜索关键词，不显示在页面上，仅用于搜索过滤
+        # background: "#ff4444"           # 直接设置卡片背景色（不需要自定义CSS）
+        # class: "highlight-red"          # 可选自定义 CSS 类
+
       - name: "Flassh 终端"
         icon: "fas fa-terminal"
-        type: "Ping"
-        method: "GET"
         subtitle: "Web SSH 客户端"
         tag: "工具"
         tagstyle: "is-info"
+        type: "Ping"                 # 智能卡片类型：Ping=检测连通性并显示响应时间
+        method: "GET"                # Ping 检测使用的 HTTP 方法：HEAD（默认）或 GET
         url: "https://webssh.cfapps.ap11.hana.ondemand.com/"
         target: "_blank"
+        keywords: "ssh 终端 terminal"
+
       - name: "Cloud Mail"
         icon: "fas fa-envelope"
-        type: "Ping"
-        method: "GET"
         subtitle: "邮箱收发服务"
         tag: "工具"
         tagstyle: "is-info"
+        type: "Ping"
+        method: "GET"
         url: "https://mail.777735.xyz/"
         target: "_blank"
+        keywords: "邮件 mail 邮箱"
 
+  # ── 分组二：PaaS 与部署平台 ───────────────────────────
   - name: "PaaS 与部署平台"
     icon: "fas fa-cloud-upload-alt"
     items:
@@ -95,6 +189,8 @@ services:
         tagstyle: "is-warning"
         url: "https://dash.zeabur.com/"
         target: "_blank"
+        keywords: "部署 容器 paas zeabur"
+
       - name: "Railway"
         icon: "fas fa-train"
         subtitle: "后端服务托管"
@@ -102,24 +198,32 @@ services:
         tagstyle: "is-warning"
         url: "https://railway.app/dashboard"
         target: "_blank"
+        keywords: "部署 后端 railway paas"
+
       - name: "阿里云控制台"
         icon: "fas fa-cloud"
         subtitle: "边缘加速与 Pages"
         url: "https://homenew.console.aliyun.com/"
         target: "_blank"
+        keywords: "阿里云 cdn 加速 云"
+
       - name: "DNSPod"
-        icon: "fas fa-cloudflare"
-        subtitle: "DNS解析"
+        icon: "fas fa-globe"           # fas fa-cloudflare 不存在，改为 fa-globe
+        subtitle: "DNS 解析"
         url: "https://console.dnspod.cn/dns/list"
         target: "_blank"
+        keywords: "dns 解析 域名"
+
       - name: "Spaceship"
         icon: "fas fa-rocket"
         subtitle: "域名资产管理"
         tag: "域名"
+        tagstyle: "is-info"
         url: "https://www.spaceship.com/"
         target: "_blank"
-        
+        keywords: "域名 domain spaceship"
 
+  # ── 分组三：自建服务与物联网 ──────────────────────────
   - name: "自建服务与物联网"
     icon: "fas fa-cube"
     items:
@@ -130,33 +234,57 @@ services:
         tagstyle: "is-danger"
         url: "https://你的密码管理器地址"
         target: "_blank"
+        keywords: "密码 password 安全"
+        # background: "#c0392b"   # 可给重要服务加红色背景色提醒
+
+      - name: "Vaultwarden"
+        type: "Vaultwarden"        # 智能卡片：自动读取 Vaultwarden 状态信息
+        logo: "assets/tools/sample.png"
+        url: "https://pass.weeping.cn"
+        target: "_blank"
+        keywords: "密码 bitwarden vaultwarden"
+
+      - name: "Uptime Kuma"
+        icon: "fas fa-chart-line"
+        subtitle: "全天候服务在线率统计"
+        tag: "监控面板"
+        tagstyle: "is-success"
+        type: "Ping"
+        method: "GET"
+        url: "https://uptimee.zeabur.app/"
+        target: "_blank"
+        keywords: "监控 uptime 在线率 状态"
+
       - name: "米家全屋智能"
         icon: "fas fa-home"
         subtitle: "设备自动化控制端"
         tag: "IoT"
         tagstyle: "is-success"
-        url: "#" # 如果有相关的Web端或Home Assistant可以填这里
+        url: "#"   # 有 Home Assistant 或米家 Web 端时填入地址
+        keywords: "智能家居 iot 米家 小米"
+
+      - name: "路由器后台"
+        icon: "fas fa-wifi"
+        subtitle: "网关与局域网管理"
+        url: "http://192.168.31.1"   # 修改为你的实际内网 IP
+        target: "_blank"
+        keywords: "路由器 网关 局域网 wifi"
+
       - name: "闲鱼工作台"
         icon: "fas fa-store"
         subtitle: "域名与闲置流转"
         url: "https://goofish.com/"
         target: "_blank"
-      - name: "Vaultwarden"
-        type: "Vaultwarden"
-        logo: "assets/tools/sample.png"
-        url: "https://pass.weeping.cn"
-      - name: "Uptime Kuma"
-        icon: "fas fa-chart-line"
-        type: "Ping"
-        method: "GET"
-        subtitle: "全天候服务在线率统计"
-        tag: "监控面板"
-        tagstyle: "_blank"
-        # 这里填入你的 Uptime Kuma 状态页地址
-        url: "https://uptimee.zeabur.app/" 
-        target: "_blank"
-      - name: "路由器后台"
-        icon: "fas fa-wifi"
-        subtitle: "网关与局域网管理"
-        url: "http://192.168.31.1" # 请修改为你的实际内网 IP
-        target: "_blank"
+        keywords: "闲鱼"
+
+# ============================================================
+# 智能卡片（type）速查备忘
+# ============================================================
+# Ping          → 检测连通性，显示响应时间 RTT
+# Vaultwarden   → 显示 Vaultwarden 状态
+# PiHole        → 显示 Pi-hole 拦截统计（需 apikey）
+# Portainer     → 显示 Docker 容器运行数量及可更新数
+# Matrix        → 显示 Matrix 服务器版本及在线状态
+# Mealie        → 显示食谱数量或今日计划餐食
+# Linkding      → 显示书签搜索结果
+# 完整列表见：https://github.com/bastienwirtz/homer/blob/main/docs/customservices.md
