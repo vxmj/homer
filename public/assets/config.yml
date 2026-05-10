@@ -18,7 +18,7 @@ logo: "logo.png"                      # 顶部 Logo 图片路径（放在 assets
 # documentTitle: "极客实验室 - 导航"
 
 # ── 顶部导航栏 ────────────────────────────────────────────
-header: true   # true=显示顶部导航栏，false=隐藏
+header: false   # true=显示顶部导航栏，false=隐藏
 
 # 【可选】自定义搜索框的快捷键，默认是 "/" 键
 # hotkey:
@@ -30,7 +30,7 @@ footer: '<div style="display: flex; justify-content: center; align-items: center
 
 # ── 布局列数 ──────────────────────────────────────────────
 # 可选值："auto" 或 数字（必须是 12 的因数：1, 2, 3, 4, 6, 12）
-columns: "3"
+columns: "auto"
 
 # ── 网络连通性检测 ────────────────────────────────────────
 # true=开启：当 Homer 页面不可访问时（如 VPN 断开）会显示提示信息
