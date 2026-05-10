@@ -275,7 +275,7 @@ services:
 
       - name: "闲鱼工作台"
         icon: "fas fa-store"
-        subtitle: "域名与闲置流转"
+        subtitle: "闲置流转"
         url: "https://goofish.com/"
         target: "_blank"
         keywords: "闲鱼"
