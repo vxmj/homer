@@ -114,11 +114,11 @@ message:
 # 设为空列表 links: [] 可以保留搜索/切换功能但不显示任何链接
 links:
   - name: "Notion"
-    icon: "fab fa-brands"
+    icon: "fab fa-file"
     url: "https://www.notion.so/"
     target: "_blank"           # _blank=新标签页打开，_self=当前页打开
   - name: "Tool"
-    icon: "fas fa-toolbox"
+    icon: "fas fa-code"
     url: "https://tool.777735.xyz/"
     target: "_blank"
   # 【多页面功能】链接到第二个配置页面，Homer 会加载 assets/page2.yml
