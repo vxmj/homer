@@ -103,7 +103,7 @@ message:
   #   content: "value"    # 用接口返回的 'value' 字段作为内容
   # refreshInterval: 60000  # 自动刷新间隔（毫秒），60000 = 每分钟刷新一次
 
-  style: "is-light"             # 消息样式颜色：is-info(蓝) / is-success(绿) / is-warning(黄) / is-danger(红)
+  style: "is-dark"             # 消息样式颜色：is-info(蓝) / is-success(绿) / is-warning(黄) / is-danger(红)
   title: "👋 欢迎回来！"        # 公告标题
   icon: "fas fa-terminal"      # 公告图标
   # content 支持 HTML，可以插入图片、链接、div 等任意内容
@@ -113,13 +113,13 @@ message:
 # 显示在顶栏右侧的快捷链接（暗色切换、布局切换、搜索框始终显示）
 # 设为空列表 links: [] 可以保留搜索/切换功能但不显示任何链接
 links:
-  - name: "GitHub"
-    icon: "fab fa-github"
-    url: "https://github.com/"
+  - name: "Notion"
+    icon: "fab fa-notion"
+    url: "https://www.notion.so/"
     target: "_blank"           # _blank=新标签页打开，_self=当前页打开
-  - name: "Homer 文档"
-    icon: "fas fa-book"
-    url: "https://github.com/bastienwirtz/homer/blob/main/docs/configuration.md"
+  - name: "Tool"
+    icon: "fas fa-toolbox"
+    url: "https://tool.777735.xyz/"
     target: "_blank"
   # 【多页面功能】链接到第二个配置页面，Homer 会加载 assets/page2.yml
   # - name: "第二页"
