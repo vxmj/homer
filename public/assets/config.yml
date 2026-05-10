@@ -114,7 +114,7 @@ message:
 # 设为空列表 links: [] 可以保留搜索/切换功能但不显示任何链接
 links:
   - name: "Notion"
-    icon: "fab fa-notion"
+    icon: "fab fa-brands"
     url: "https://www.notion.so/"
     target: "_blank"           # _blank=新标签页打开，_self=当前页打开
   - name: "Tool"
@@ -235,13 +235,6 @@ services:
         target: "_blank"
         keywords: "密码 password 安全"
         # background: "#c0392b"   # 可给重要服务加红色背景色提醒
-
-      - name: "Vaultwarden"
-        type: "Vaultwarden"        # 智能卡片：自动读取 Vaultwarden 状态信息
-        logo: "assets/tools/sample.png"
-        url: "https://pass.weeping.cn"
-        target: "_blank"
-        keywords: "密码 bitwarden vaultwarden"
 
       - name: "Uptime Kuma"
         icon: "fas fa-chart-line"
