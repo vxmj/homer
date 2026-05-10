@@ -177,6 +177,17 @@ services:
         target: "_blank"
         keywords: "邮件 mail 邮箱"
 
+      - name: "IT Toolbox"
+        icon: "fas fa-toolbox"
+        subtitle: "开发者工具箱"
+        tag: "工具"
+        tagstyle: "is-info"
+        type: "Ping"
+        method: "GET"
+        url: "https://tool.777735.xyz/"
+        target: "_blank"
+        keywords: "test"
+
   # ── 分组二：PaaS 与部署平台 ───────────────────────────
   - name: "PaaS 与部署平台"
     icon: "fas fa-cloud-upload-alt"
