@@ -114,7 +114,7 @@ message:
 # 设为空列表 links: [] 可以保留搜索/切换功能但不显示任何链接
 links:
   - name: "Notion"
-    icon: "fab fa-text"
+    icon: "fab fa-font"
     url: "https://www.notion.so/"
     target: "_blank"           # _blank=新标签页打开，_self=当前页打开
   - name: "Tool"
