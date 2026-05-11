@@ -5,7 +5,7 @@
 # ============================================================
 
 # 【可选】从外部 URL 加载配置文件（启用后本文件其余配置将被忽略）
-# externalConfig: https://example.com/server-luci/config.yaml
+externalConfig: https://api.weeping.cn/homer/config.yaml
 
 # ── 基础信息 ──────────────────────────────────────────────
 title: "极客实验室"                  # 页面主标题
