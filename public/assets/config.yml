@@ -114,7 +114,7 @@ message:
 # 设为空列表 links: [] 可以保留搜索/切换功能但不显示任何链接
 links:
   - name: "Notion"
-    icon: "fas fa-pen"
+    icon: "fas fa-code"
     url: "https://www.notion.so/"
     target: "_blank"           # _blank=新标签页打开，_self=当前页打开
   - name: "Tool"
@@ -177,14 +177,14 @@ services:
         target: "_blank"
         keywords: "test"
 
-      - name: "IT Toolbox"
+      - name: "IT Tool"
         icon: "fas fa-toolbox"
         subtitle: "开发者工具箱"
         tag: "工具"
         tagstyle: "is-info"
         type: "Ping"
         method: "GET"
-        url: "https://tool.777735.xyz/"
+        url: "https://tool.weeping.cn/"
         target: "_blank"
         keywords: "test"
 
