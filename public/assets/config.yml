@@ -9,7 +9,7 @@
 
 # ── 基础信息 ──────────────────────────────────────────────
 title: "极客实验室"                  # 页面主标题
-subtitle: "个人基础设施与服务导航"     # 页面副标题
+subtitle: "个人专属导航页"     # 页面副标题
 logo: "logo.png"                      # 顶部 Logo 图片路径（放在 assets/ 目录下）
 # 【二选一】也可以用 Font Awesome 图标代替 Logo 图片，取消下行注释即可
 # icon: "fas fa-terminal"
@@ -26,7 +26,7 @@ header: false   # true=显示顶部导航栏，false=隐藏
 
 # ── 底部备案信息 ──────────────────────────────────────────
 # 设为 false 可完全隐藏底栏
-footer: '<div style="display:flex;justify-content:center;align-items:center;gap:20px;font-weight:600;font-size:13px;"><a href="https://beian.mps.gov.cn/#/query/webSearch?code=45098102000495" target="_blank" style="display:flex;align-items:center;gap:5px;color:#555;text-decoration:none;transition:color .2s;" onmouseover="this.style.color=''#222''" onmouseout="this.style.color=''#555''"><img src="https://beian.mps.gov.cn/img/logo01.dd7ff50e.png" style="width:16px;height:16px;opacity:.85;">桂公网安备45098102000495号</a><a href="https://beian.miit.gov.cn" target="_blank" style="color:#555;text-decoration:none;transition:color .2s;" onmouseover="this.style.color=''#222''" onmouseout="this.style.color=''#555''">桂ICP备2022002693号-3</a><span style="display:flex;align-items:center;color:#555;">本网站由<img src="https://upyun.weeping.cn/upyunzs.png" style="height:22px;width:auto;margin:0 4px;">提供CDN加速/云存储服务</span></div>'
+footer: '<div style="display:flex;justify-content:center;align-items:center;gap:20px;font-weight:600;font-size:13px;"><a href="https://beian.mps.gov.cn/#/query/webSearch?code=45098102000495" target="_blank" style="display:flex;align-items:center;gap:5px;color:#555;text-decoration:none;transition:color .2s;" onmouseover="this.style.color=''#222''" onmouseout="this.style.color=''#555''"><img src="https://beian.mps.gov.cn/img/logo01.dd7ff50e.png" style="width:16px;height:16px;opacity:.85;">桂公网安备45098102000495号</a><a href="https://beian.miit.gov.cn" target="_blank" style="color:#555;text-decoration:none;transition:color .2s;" onmouseover="this.style.color=''#222''" onmouseout="this.style.color=''#555''">桂ICP备2022002693号-3</a><span style="display:flex;align-items:center;color:#555;">本网站由<a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank" style="display:flex;align-items:center;"><img src="https://upyun.weeping.cn/upyunzs.png" style="height:22px;width:auto;margin:0 4px;border:0;"></a>提供CDN加速/云存储服务</span></div>'
 # ── 布局列数 ──────────────────────────────────────────────
 # 可选值："auto" 或 数字（必须是 12 的因数：1, 2, 3, 4, 6, 12）
 columns: "auto"
@@ -162,7 +162,7 @@ services:
         tagstyle: "is-info"
         #type: "Ping"                 # 智能卡片类型：Ping=检测连通性并显示响应时间
         #method: "GET"                # Ping 检测使用的 HTTP 方法：HEAD（默认）或 GET
-        url: "https://webssh.cfapps.ap11.hana.ondemand.com/"
+        url: "https://webssh.weeping.cn/"
         target: "_blank"
         keywords: "ssh 终端 terminal"
 
@@ -173,7 +173,7 @@ services:
         tagstyle: "is-info"
         #type: "Ping"
         #method: "GET"
-        url: "https://mail.777735.xyz/"
+        url: "https://wweu.eu.cc/"
         target: "_blank"
         keywords: "test"
 
