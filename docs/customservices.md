@@ -29,6 +29,7 @@ Available services are located in `src/components/`:
 - [Immich](#immich)
 - [Jellystat](#jellystat)
 - [Lidarr, Prowlarr, Sonarr, Readarr and Radarr](#lidarr-prowlarr-sonarr-readarr-and-radarr)
+- [LibrisLog](#librislog)
 - [Linkding](#linkding)
 - [Matrix](#matrix)
 - [Mealie](#mealie)
@@ -383,6 +384,22 @@ This integration supports at max 15 results from Linkding, but you can add it mu
 ```
 
 Auto refresh is supported by this integration.  
+
+## LibrisLog
+
+Displays library statistics from your LibrisLog book tracker: total books, books read, currently reading, and want-to-read counts.
+
+```yaml
+- name: "LibrisLog"
+  type: "LibrisLog"
+  logo: "https://docs.librislog.app/logo.png"
+  url: "https://my-service.url"
+  apikey: "<---insert-api-key-here--->"
+```
+
+Auto refresh is supported by this integration.
+
+**API Key**: Generate an API key in your LibrisLog instance settings.
 
 ## Matrix
 
@@ -861,6 +878,10 @@ The service automatically handles Transmission's session management and CSRF pro
 ## Truenas Scale
 
 Displays TrueNAS version.
+
+1. In the TrueNAS web interface, click your user avatar in the top-right corner and select "API Keys".
+2. Click "Add", give the key a name such as "homer", and confirm.
+3. Copy the generated key immediately - TrueNAS only shows it once - and paste it as the API Key when creating the integration in homer.
 
 ```yaml
 - name: "Truenas"
